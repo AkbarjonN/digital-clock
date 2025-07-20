@@ -24,8 +24,8 @@ body {
 }
 .square {
   position: absolute;
-  top: 42%;
-  left: 28%;
+  top: -100%;
+  left: -25%;
   border-radius: 10%;
   width: 150px;
   height: 150px;
@@ -34,8 +34,8 @@ body {
 }
 .octagon {
   position: absolute;
-  top: 12%;
-  right: 28%;
+  bottom: -100%;
+  right: -25%;
   width: 150px;
   height: 150px;
   clip-path: polygon(
@@ -77,6 +77,7 @@ body {
   font-weight: 500;
   transition: all 0.5s;
   margin-top: -200px;
+  position: relative;
 }
 .container:hover {
   box-shadow: 0px 26px 70px 1px rgba(0, 0, 0, 0.4);
@@ -94,13 +95,42 @@ span {
   position: absolute;
   bottom: 50px;
 }
-
-@media (max-width: 460px) {
+@media (max-width: 768px){
+  .square{
+    width: 100px;
+    height: 100px;
+    top: -65%;
+    left: -15%;
+  }
+  .octagon{
+    width: 100px;
+    height: 100px;
+    bottom: -58%;
+    right: -15%;
+  }
+  span{
+    width: 70px;
+  }
+  
+}
+@media (max-width: 500px) {
   .time-container {
     font-size: 40px;
     gap: 0px;
   }
-  span{
-    width: 70px;
+  .square{
+    width: 100px;
+    height: 100px;
+    top: -150%;
+    left: 35%;
+  }
+  .container{
+    margin-top: -120px;
+  }
+  .octagon{
+    width: 100px;
+    height: 100px;
+    bottom: -150%;
+    right: 35%;
   }
 }
