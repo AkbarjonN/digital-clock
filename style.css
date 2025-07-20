@@ -22,6 +22,50 @@ body {
     #ffcc70 100%
   );
 }
+.square {
+  position: absolute;
+  top: 42%;
+  left: 28%;
+  border-radius: 10%;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #2196f3, #0d47a1);
+  animation: spin 4s linear infinite, colorShift 8s linear infinite;
+}
+.octagon {
+  position: absolute;
+  top: 12%;
+  right: 28%;
+  width: 150px;
+  height: 150px;
+  clip-path: polygon(
+    30% 0%, 70% 0%, 100% 30%, 100% 70%,
+    70% 100%, 30% 100%, 0% 70%, 0% 30%
+  );
+  animation: spin 4s linear infinite, colorChange 8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes colorChange {
+  0%   { background: red; }
+  25%  { background: orange; }
+  50%  { background: yellow; }
+  75%  { background: limegreen; }
+  100% { background: red; }
+}
+
+@keyframes colorShift {
+  0%   { background: #6a00ff; }
+  20%  { background: #0099ff; }
+  40%  { background: #00ffaa; }
+  60%  { background: #ffee00; }
+  80%  { background: #ff0055; }
+  100% { background: #6a00ff; }
+}
 .container {
   display: flex;
   flex-direction: column;
